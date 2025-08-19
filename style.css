@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+
+body {
+    display: grid;
+    padding: 8px;
+    font-family: 'comicsan', cursive;
+    place-items: center;
+    background-color: #ebd6c3;
+    text-align: center;
+}
+
+label,
+select {
+    padding: 8px;
+    width: 150px;
+    font-weight: 800;
+    margin-top: 20px;
+    font-family: 'comicsan', cursive;
+    border-radius: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: whitesmoke;
+    background-color: #12343b;
+    border-radius: 7px;
+    font-size: 16px;
+    border: none;
+}
+
+.count {
+    display: grid;
+    width: 600px;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0px 0 0px 0;
+}
+
+.count div {
+    height: 60px;
+    width: 60px;
+    border: 0.2px solid black;
+}
+
+.start-btn:hover {
+    background-color: #2d545e;
+    cursor: pointer;
+}
+
+#toggler {
+    padding: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.left-panel {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-panel {
+    width: 75%;
+    padding: 20px;
+}
+
+.scene {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    perspective: 600px;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s;
+    margin: auto;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: whitesmoke;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.one {
+    transform: rotateY(0deg) translateZ(50px);
+}
+
+.two {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.three {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.four {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.five {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.six {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+#dice-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    color: whitesmoke;
+    background-color: rgb(35, 71, 102);
+    border: none;
+    border-radius: 5px;
+}
+
+#dice-btn:hover {
+    cursor: pointer;
+    background-color: rgb(50, 100, 150);
+}
+
+#p1,
+#p2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid black;
+    position: relative;
+}
+
+#p1 {
+    position: relative;
+    z-index: 2;
+    top: 0px;
+    left: -62px;
+}
+
+#p2 {
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    left: -62px;
+}
+
+img {
+    top: -615px;
+    position: relative;
+    margin: 0;
+    left: 0;
+    height: 615px;
+    width: 616px;
+}
