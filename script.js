@@ -82,9 +82,10 @@ function Play(Player, PSum, Correction, Num) {
         Left = (Sum - 1) * 62;
         Top = -0 * 62 - Correction;
     } else if (Sum === 100) {
+        WinSound.play()
         setTimeout(() => {
-            WinSound.play()
             alert(Player === "p1" ? "Player 1 Won!!! 🎉🎊" : "Player 2 Won!!! 🎉🎊")
+            location.reload()
         }, 100);
         return;
     } else {
@@ -112,6 +113,9 @@ function Play(Player, PSum, Correction, Num) {
     }
     Pawn.style.left = `${Left}px`
     Pawn.style.top = `${Top}px`
+    Pawn.classList.remove('jump')
+    void Pawn.offsetWidth
+    Pawn.classList.add('jump')
 }
 
 function RollDice() {

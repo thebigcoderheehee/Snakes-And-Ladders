@@ -160,6 +160,7 @@ select {
     z-index: 2;
     top: 0px;
     left: -62px;
+    transition: all linear 1s;
 }
 
 #p2 {
@@ -167,6 +168,7 @@ select {
     z-index: 2;
     top: -50px;
     left: -62px;
+    transition: all linear 1s;
 }
 
 img {
@@ -176,4 +178,37 @@ img {
     left: 0;
     height: 615px;
     width: 616px;
+}
+
+.jump {
+    animation: jump 1.8s ease;
+}
+
+@keyframes jump {
+    0%{transform: translateY(0)}
+    30%{transform: translateY(-20px)}
+    60%{transform: translateY(0)}
+}
+
+@media (max-width: 400px) {
+    .game-container {
+        display: grid;
+        flex-direction: column;
+    }
+
+    .count div {
+        height: 30px;
+        width: 30px;
+    }
+
+    .left-panel {
+        margin-bottom: 300px;
+        width: 100%;
+    }
+
+    #p1,
+    #p2 {
+        height: 25px;
+        width: 25px;
+    }
 }
